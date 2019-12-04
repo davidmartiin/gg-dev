@@ -1,0 +1,26 @@
+.PostGrid{
+	padding: $colored-bar-size;
+
+	.post-item{
+		width: 30%;
+		flex-basis: 1;
+		margin-right: 5%;
+		margin-bottom: 10vh;
+		&:nth-child(3n+3){
+			margin-right: 0;
+		}
+		.heading{
+			font-weight: bold;
+			line-height: 1em;
+		}
+		a{
+			color: $brown;
+			text-decoration: none;
+			transition: $default-transition;
+
+			&:hover{
+				color: $primary-color;
+			}
+		}
+	}
+}

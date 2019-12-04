@@ -1,0 +1,40 @@
+.BloomDonors{
+	.donor-container{
+		padding-left: 3vw;
+		.side-text{
+			text-align: center;
+		}
+		.heading{
+			font-size: 2.2rem;
+			margin-bottom: 3em;
+		}
+		ul{
+			list-style: none;
+			font-size: 1.8em;
+			line-height: 1em;
+
+			li{
+				margin-bottom: 1em;
+			}
+		}
+	}
+	.image-col{
+		height: 100%;
+		padding-right: $colored-bar-size;
+		padding-bottom: $colored-bar-size;
+		.image-container{
+			height: calc(100vh - #{$header-height} - #{$colored-bar-size});
+			position: relative;
+			&::after{
+				content: "";
+				height: calc(100% + #{$colored-bar-size});
+				width: calc(100% + #{$colored-bar-size});
+				position: absolute;
+				right: -$colored-bar-size;
+				bottom: -$colored-bar-size;
+				background-color: $primary-color;
+				z-index: $below-base;
+			}
+		}
+	}
+}

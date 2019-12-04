@@ -1,0 +1,110 @@
+.StoryGrid{
+	padding: $colored-bar-size;
+	.first-row, .second-row, .third-row{
+		margin-bottom: $colored-bar-size;
+	}
+	.story{
+		position: relative;
+		a{
+			height: 100%;
+			width: 100%;
+			color: #FFF;
+			text-decoration: none;
+			opacity: 0;
+			background-color: rgba(246, 138, 51, .8);
+			transition: $default-transition;
+			font-size: 4em;
+
+			&:hover{
+				opacity: 1;
+			}
+			p{
+				margin-bottom: 0;
+			}
+		}
+		&.first{
+			min-height: 50vh;
+			margin-right: $colored-bar-size;
+		}
+		&.second{
+			margin-top: 5%;
+			&::after{
+				content: "";
+				height: $colored-bar-size;
+				width: 100%;
+				position: absolute;
+				top: 100%;
+				left: 0;
+				background-color: $secondary-color;
+			}
+		}
+		&.first, &.second{
+			width: 50%;
+		}
+		&.third{
+			margin-right: $colored-bar-size;
+			margin-bottom: $colored-bar-size;
+			&::after{
+				content: "";
+				width: calc(100% + #{$colored-bar-size});
+				height: calc(100% + #{$colored-bar-size});
+				background-color: $primary-color;
+				left: 0;
+				top: 0;
+				position: absolute;
+				z-index: $below-base;
+			}
+		}
+		&.fourth{
+			min-height: 50vh;
+			margin-right: $colored-bar-size;
+		}
+		&.fifth{
+			margin-bottom: calc(#{$colored-bar-size} / 2);
+		}
+		&.third, &.fourth, &.fifth{
+			width: 30%;
+		}
+		&.sixth{
+			margin-right: $colored-bar-size;
+			min-height: 50vh;
+			width: 45%;
+		}
+		&.seventh{
+			width: 55%;
+			margin-bottom: $colored-bar-size;
+			&::after{
+				content: "";
+				width: 100%;
+				height: $colored-bar-size;
+				position: absolute;
+				top: 100%;
+				left: 0;
+				background-color: $secondary-color;
+			}
+		}
+		&.sixth, &.seventh{
+		}
+		&.eigth{
+			margin-left: auto;
+			min-height: 50vh;
+		}
+		&.ninth{
+			margin-left: $colored-bar-size;
+			margin-bottom: $colored-bar-size;
+			&::after{
+				content: "";
+				height: calc(100% + #{$colored-bar-size});
+				width: calc(100% + #{$colored-bar-size});
+				position: absolute;
+				left: -$colored-bar-size;
+				top: 0;
+				background-color: $primary-color;
+				z-index: $below-base;
+			}
+		}
+		&.eigth, &.ninth{
+			width:25%;
+		}
+	}
+}

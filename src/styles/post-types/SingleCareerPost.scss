@@ -1,0 +1,25 @@
+.SingleCareerPost{
+	padding: calc(#{$header-height} + 2em) 1em $header-height;
+	width: 70%;
+	margin: 0 auto;
+
+	p.h1{
+		font-size: 3em;
+		margin-bottom: 1.5em;
+	}
+	.hours, .salary, .overview{
+		font-size: 2em;
+		line-height: 1.2em;
+		margin-bottom: 0;
+	}
+	.overview{
+		margin-bottom: 2em;
+	}
+	.responsibilities{
+		margin-bottom: 5vh;
+		font-size: 1.3em;
+	}
+	.skills{
+		font-size: 1.3em;
+	}
+}

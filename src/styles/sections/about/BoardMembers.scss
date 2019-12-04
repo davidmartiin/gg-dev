@@ -1,0 +1,101 @@
+.BoardMembers{
+	padding-right: $colored-bar-size;
+	position: relative;
+	min-height: 100vh;
+	&::after{
+		content: "";
+		height: 100%;
+		width: $colored-bar-size;
+		position: absolute;
+		right: 0;
+		top: 0;
+		background-color: $primary-color;
+	}
+	.col-40{
+		padding-left: 3vw;
+		position: relative;
+		.side-text{
+			margin-top: 20vh;
+			align-self: flex-start;
+		}
+		.vegetable{
+			background-position: top;
+			width: calc(100% - 3vw);
+			height: 100%;
+			position: absolute;
+			z-index: $below-base;
+
+		}
+	}
+	.col-60{
+		padding: 10vh 0 10vh 3em;
+		.active-board-member{
+			margin-bottom: auto;
+			p{
+				font-weight: bold;
+				margin-bottom: 0;
+				opacity: 0;
+				transform: translate(50px, 0);
+				&.true{
+					opacity: 1;
+					transform: translate(0, 0);
+					transition: all cubic-bezier(.4, 1, .5, 1) .8s;
+					&:nth-child(2){
+						transition-delay: .1s;
+					}
+					&:nth-child(3){
+						transition-delay: .2s;
+					}
+					&:nth-child(4){
+						transition-delay: .3s;
+					}
+				}
+			}
+			.title{
+				font-size: 2.3em;
+				line-height: 1em;
+				margin-bottom: .3em;
+			}
+			.board-position{
+				font-size: 1.8em;
+				margin-bottom: 1em;
+
+			}
+		}
+		.list{
+			ul{
+				margin-left: 0;
+				font-family: $secondary-font;
+				font-size: 2em;
+				line-height: 1.5em;
+				list-style: none;
+				&:last-child{
+					padding-left: 1em;
+				}
+				li{
+					margin-bottom: 0;
+					position: relative;
+					cursor: pointer;
+					transition: $default-transition;
+					&::before{
+						content: "";
+						height: 100%;
+						width: 1em;
+						background-color: transparent;
+						position: absolute;
+						left: 0;
+						top: 50%;
+						transform: translate(-125%, -50%);
+						transition: background-color cubic-bezier(.4, 1, .5, 1) .4s;
+					}
+					&.active, &:hover{
+						font-weight: bold;
+						&::before{
+							background-color: $primary-color;
+						}
+					}
+				}
+			}
+		}
+	}
+}

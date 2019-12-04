@@ -1,0 +1,56 @@
+.FramedOneColumn{
+	padding-top: $colored-bar-size;
+	padding-left: calc(#{$colored-bar-size} * 2);
+	padding-bottom: $colored-bar-size;
+	height: 100vh;
+	position: relative;
+	&::before{
+		content: "";
+		height: 80%;
+		width: calc(50% - #{$colored-bar-size});
+		position: absolute;
+		top: 0;
+		left: $colored-bar-size;
+		background-color: $primary-color;
+		z-index: $below-base;
+	}
+	&::after{
+		content: "";
+		height: $colored-bar-size;
+		width: 50%;
+		position: absolute;
+		bottom: 0;
+		right: 0;
+		background-color: $secondary-color;
+		z-index: $below-base;
+	}
+
+	.container{
+		height: 100%;
+		padding: $colored-bar-size;
+		padding-right: calc(#{$colored-bar-size} + 3vw);
+		position: relative;
+		&::before{
+			content: "";
+			position: absolute;
+			left: 0;
+			top: 0;
+			height: 100%;
+			width: 100%;
+			background-color: rgba(0, 0, 0, .3);
+			z-index: $base;
+		}
+		/* purgecss start ignore */
+		p.h1{
+			font-size: 6em;
+			font-family: $primary-font;
+			z-index: $above-base;
+		}
+		p:nth-child(2){
+			font-size: 2em;
+			position: relative;
+			line-height: 1.4em;
+		}
+		/* purgecss end ignore */
+	}
+}

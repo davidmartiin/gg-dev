@@ -1,0 +1,7 @@
+[build]
+  Functions = "lambda"
+  Command = "npm run build:lambda && gatsby build"
+
+  [build.environment]
+  GATSBY_GFORM_CK="ck_00e8f056c4b01b575eb575021c77ae499ef9aeb4"
+  GATSBY_GFORM_CS="cs_b70947db897152e32796ac983488b81a07a7a335"

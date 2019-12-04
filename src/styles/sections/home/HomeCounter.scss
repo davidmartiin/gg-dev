@@ -1,0 +1,62 @@
+.HomeCounter{
+	padding: 15vh 20vw 15vw calc(#{$colored-bar-size} * 2);
+
+	p{
+		font-family: "Chelsea Market", cursive;
+	}
+	.top-row{
+		padding-left: $colored-bar-size;
+		.col-40{
+			.desc{
+				position: absolute;
+				width: 150%;
+			}
+			.counter{
+				margin-top: 4rem;
+			}
+		}
+	}
+	.bottom-row{
+		.col-60{
+			padding-left: 1.5em;
+			.desc{
+				font-size: 1.3em;
+				line-height: 1.4em;
+				font-weight: bold;
+			}
+			.col-40{
+				padding-left: 1.5em;
+			}
+		}
+	}
+	.col-40, .col-50, .col-60{
+		position: relative;
+	}
+	.heading{
+		font-size: 3em;
+		line-height: 1em;
+	}
+	.desc{
+	}
+	.counter{
+		font-size: 12em;
+		line-height: 1em;
+	}
+	.block{
+		height: 100%;
+		width: 60%;
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: $below-base;
+
+		&.green{
+			background-color: $primary-color;
+			width: 70%;
+		}
+		&.orange{
+
+			background-color: $secondary-color;
+		}
+	}
+}

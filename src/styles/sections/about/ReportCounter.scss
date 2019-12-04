@@ -1,0 +1,71 @@
+.ReportCounter{
+	min-height: calc(100vh - #{$header-height});
+	padding: 3vh 3vw 12vh;
+
+	.container{
+		height: 100%;
+		width: 100%;
+		padding-top: 10vh;
+		.row{
+			.block{
+				height: 90%;
+				width: 55%;
+			}
+			.col{
+				&:last-child{
+					padding-left: 2em;
+				}
+				.heading{
+					font-size: 3em;
+					line-height: 1em;
+				}
+				.counter{
+					font-size: 12em;
+					line-height: 1em;
+				}
+			}
+		}
+		.row:first-child{
+			.col:first-child{
+				width: 44%;
+			}
+			.col:last-child{
+				width: 56%;
+			}
+		}
+		.row:last-child{
+			.block{
+				width: 65%;
+			}
+			.col:first-child{
+				position: relative;
+				width: 40%;
+
+
+				.pdf-link{
+					position: absolute;
+					left: 15%;
+					bottom: 20%;
+					min-width: 350px;
+					z-index: $above-base;
+					color: $brown;
+					transition: $default-transition;
+					text-decoration: none;
+					font-size: 1.5em;
+					&:hover{
+						color: $primary-color;
+					}
+					img{
+						margin-bottom: 0;
+						max-width: 80px;
+						margin-right: 1em;
+					}
+				}
+			}
+			.col:last-child{
+				padding-top: 2em;
+				width: 60%;
+			}
+		}
+	}
+}

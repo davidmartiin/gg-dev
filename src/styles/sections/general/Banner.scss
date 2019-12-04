@@ -1,0 +1,158 @@
+//Banner Specific Variable
+
+
+//Banner Styles
+.Banner{
+	padding-left: $colored-bar-size;
+	background-color: $primary-color;
+	.container{
+		height: calc(100vh - #{$header-height});
+		padding-left: $scroll-button-width;
+
+		h1{
+			font-family: $secondary-font;
+		}
+		p{
+			font-family: $primary-font;
+		}
+		.heading{
+			font-size: 4em;
+			line-height: 1.1em;
+		}
+
+		.BannerButton{
+			height: $scroll-button-width;
+			width: $scroll-button-width;
+			background-color: $secondary-color;
+			background-image: url('');
+			background-position: center center;
+			background-size: 25% auto;
+			background-repeat: no-repeat;
+			position: absolute;
+			left: $colored-bar-size;
+			bottom: 0;
+			transition: $default-transition;
+			overflow: hidden;
+
+			&::after{
+				content: "";
+				width: 0;
+				height: 0;
+				position: absolute;
+				left: 50%;
+				top: 50%;
+				transform: translate(-50%, -50%);
+				border-radius: 50%;
+				background-color: $off-secondary-color;
+				transition: $default-transition;
+				cursor: pointer;
+			}
+			&:hover::after, &.active::after{
+				width: 150%;
+				height: 150%;
+			}
+
+			a{
+				z-index: 1;
+				position: relative;
+				height: 100%;
+				width: 100%;
+
+				img{
+					margin-bottom: 0;
+				}
+			}
+		}
+		.BannerNav{
+			position: absolute;
+			bottom: 0;
+			left: $colored-bar-size;
+
+			&.stuck{
+				position: fixed;
+				top: $header-height;
+				bottom: auto;
+				z-index: $header-z;
+			}
+			.BannerButton{
+				width: auto;
+				height: auto;
+				min-height: $scroll-button-width;
+				min-width: $scroll-button-width;
+				background-color: $peach;
+				border: 1px solid #E3D8CC;
+				border-top: none;
+				border-left: none;
+				left:0;
+				position: relative;
+				&.active, &:hover{
+					border-color: $secondary-color;
+				}
+				&::after{
+					background-color: $secondary-color;
+				}
+				&:last-child{
+					border-right: none;
+				}
+				a{
+					padding: .5em 1em;
+					color: $brown;
+					text-decoration: none;
+					flex-direction: column;
+					justify-content: flex-end;
+				}
+				p{
+					font-size: .8em;
+					margin: 0;
+				}
+			}
+		}
+	}
+}
+//Events Banner
+.Banner.Events{
+	.BannerNav{
+		.BannerButton p{
+			font-size: 2em;
+			z-index: $above-base;
+			cursor: pointer;
+		}
+	}
+	.BannerButton{
+		justify-content: center;
+		align-items: center;
+		padding: 0 1em;
+		color: $brown;
+		&.active, &:hover{
+			color: #FFF;
+		}
+	}
+}
+.Banner.Blog{
+	.BannerNav{
+		.BannerButton{
+			flex-direction: column;
+			align-items: center;
+
+			p{
+				margin-top: auto;
+			}
+		}
+	}
+	.BannerButton{
+		cursor: pointer;
+		padding: 0 1em;
+		img, p{
+			z-index: 1;
+		}
+		img{
+			justify-self: center;
+			margin-bottom: 0;
+			margin-top: auto;
+		}
+		p{
+			margin-top: auto;
+			justify-self: flex-end;
+		}
+	}
+}

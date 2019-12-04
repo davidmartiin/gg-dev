@@ -1,0 +1,23 @@
+.Partners{
+	padding: 5vh 0 5vh 3vw;
+	background-size: 40% auto;
+	background-position: bottom right;
+	background-repeat: no-repeat;
+	.image-container{
+		padding-left: 3vw;
+		.row{
+			padding: 3vh 0;
+			&:first-child{
+				padding-top: 0;
+			}
+			img{
+				margin-bottom: 0;
+				margin-right: 4em;
+
+				&:last-child{
+					margin-right: 0;
+				}
+			}
+		}
+	}
+}

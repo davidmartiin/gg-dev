@@ -1,0 +1,172 @@
+//Font
+//Font Sizes
+/* purgecss start ignore */
+.h1{
+	font-size: 2em;
+}
+.h2{
+	font-size: 1.5em;
+}
+.h3{
+	font-size: 1.17em;
+}
+p.h1.large{
+	font-size: 2.5em;
+	line-height: 1em;
+}
+p.large{
+	font-size: 1.8em;
+	line-height: 1em;
+}
+//Font Weights
+.bold{
+	font-weight: bold;
+}
+//Font colors
+.white{
+	color: #FFF;
+}
+.primary{
+	color: $primary-color;
+}
+.secondary{
+	color: $secondary-color;
+}
+.brown{
+	color: $brown;
+}
+.peach{
+	color: $peach;
+}
+
+//Backgrounds
+.primary-bg{
+	background-color: $primary-color;
+}
+.secondary-bg{
+	background-color: $secondary-color;
+}
+//Font faces
+.primary-font{
+	font-family: $primary-font;
+}
+.secondary-font{
+	font-family: $secondary-font;
+}
+// Flex
+//Flex Row
+.flex{
+	display: flex;
+}
+.flex-col{
+	flex-direction: column;
+}
+.flex-wrap{
+	flex-wrap: wrap;
+}
+.flex-center{
+	justify-content: center;
+	align-items: center;
+}
+.ai-start{
+	align-items: flex-start;
+}
+.as-start{
+	align-self: flex-start;
+}
+.ai-center{
+	align-items: center;
+}
+.as-center{
+	align-self: center;
+}
+.ai-end{
+	align-items: flex-end;
+}
+.as-end{
+	align-self: flex-end;
+}
+.jc-start{
+	justify-content: flex-start;
+}
+.js-start{
+	justify-self: flex-start;
+}
+.jc-center{
+	justify-content: center;
+}
+.js-center{
+	justify-self: center;
+}
+.jc-end{
+	justify-content: flex-end;
+}
+.js-end{
+	justify-self: flex-end;
+}
+
+//Layout
+.col-10{
+	width: 10%;
+}
+.col-15{
+	width: 15%;
+}
+.col-20{
+	width: 20%;
+}
+.col-25{
+	width: 25%;
+}
+.col-30{
+	width: 30%;
+}
+.col-33{
+	width: 33.333336%;
+}
+.col-35{
+	width: 35%;
+}
+.col-40{
+	width: 40%;
+}
+.col-45{
+	width: 45%;
+}
+.col-50{
+	width: 50%;
+}
+.col-55{
+	width: 55%;
+}
+.col-60{
+	width: 60%;
+}
+.col-65{
+	width: 65%;
+}
+.col-70{
+	width: 70%;
+}
+.col-75{
+	width: 75%;
+}
+.col-80{
+	width: 80%;
+}
+.col-85{
+	width: 85%;
+}
+.col-90{
+	width: 90%;
+}
+.col-100{
+	width: 100%;
+}
+//Image
+.bg-img{
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+}
+/* purgecss end ignore */

@@ -1,0 +1,54 @@
+.TwoColumnSimpleSlider{
+	height: calc(100vh - #{$header-height});
+	.slide-container{
+		position: relative;
+
+		.slide-image{
+			width: 50vw;
+			height: 100%;
+			position: absolute;
+			top: 0;
+			left: 0;
+			z-index: $below-base;
+			opacity: 0;
+			transition: opacity cubic-bezier(.4, 1, .5, 1) 1s;
+
+			&.active{
+				opacity: 1;
+				z-index: $base;
+			}
+		}
+		.slider-nav{
+			position: absolute;
+			right: 1em;
+			bottom: 1em;
+			z-index: $above-base;
+
+			.slide-nav-item{
+				height: 30px;
+				width: 30px;
+				margin-right: 1em;
+				border: 2px solid transparent;
+				border-radius: 50%;
+				background-color: $off-primary-color;
+				cursor: pointer;
+				transition: $default-transition;
+
+				&:last-child{
+					margin-right: 0;
+				}
+				&.active, &:hover{
+					border-color: $secondary-color;
+					background-color: $primary-color;
+				}
+			}
+		}
+	}
+	.col-50:last-child{
+		padding: 2em 7vw 2em 2em;
+		.copy-container{
+			font-size: 1.3em;
+			line-height: 1.4em;
+		}
+	}
+}

@@ -1,0 +1,102 @@
+.ProgramSlider{
+	padding-left: 2vw;
+	padding-right: $colored-bar-size;
+	.side-text{
+		align-self: flex-start;
+	}
+	.program-info{
+		width: 100%;
+		padding-right: 3em;
+	}
+	.program-nav{
+		margin-bottom: 5vh;
+		.nav-item{
+			cursor: pointer;
+			margin-right: 1em;
+			padding: .5em;
+			&:last-child{
+				margin-right: 0;
+			}
+			&.active{
+				div{
+					border-color: $secondary-color;
+				}
+				p{
+					color: $secondary-color;
+				}
+			}
+			div{
+				padding: 1.3em 1em;
+				border: 4px solid transparent;
+				border-radius: 50%;
+				margin-bottom: auto;
+			}
+			img{
+				margin-bottom: 0;
+			}
+			p{
+				text-align: center;
+				margin-bottom: 0;
+				color: $brown;
+			}
+		}
+	}
+	.program-items{
+		position: relative;
+		height: 100%;
+		.content{
+			position: absolute;
+			top: 0;
+			left: 0;
+			opacity: 0;
+
+
+			&.active{
+				transition: all cubic-bezier(.4, 1, .5, 1) 1s;
+				opacity: 1;
+
+				.title, .content-inner{
+					transition: all cubic-bezier(.4, 1, .5, 1) 1s;
+					transform: translate3d(0, 0, 0);
+				}
+			}
+			.title{
+				transform: translate3d(50px, 0, 0);
+				font-size: 2.5em;
+				margin-bottom: 2em;
+			}
+			.content-inner{
+				transform: translate3d(0, 50px, 0);
+				padding-left: 3em;
+				font-size: 1.5em;
+				line-height: 1.4em;
+			}
+		}
+	}
+	.images{
+		position: relative;
+		min-height: calc(100vh - #{$header-height});
+		&::after{
+			content: "";
+			position: absolute;
+			right: -$colored-bar-size;
+			top: 0;
+			height: 100%;
+			width: $colored-bar-size;
+			background-color: $secondary-color;
+		}
+		& > div{
+			height: 100%;
+			width: 100%;
+			position: absolute;
+			top: 0;
+			left: 0;
+			opacity: 0;
+			transition: all cubic-bezier(.4, 1, .5, 1) 1s;
+
+			&.active{
+				opacity: 1;
+			}
+		}
+	}
+}

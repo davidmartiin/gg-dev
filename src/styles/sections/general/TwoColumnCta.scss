@@ -1,0 +1,112 @@
+.TwoColumnCta{
+	padding: 0 $colored-bar-size;
+
+	&.bordered{
+		padding-top: $colored-bar-size;
+
+		.col-50.left{
+			position: relative;
+			.background::after{
+				content: "";
+				width: calc(100% + #{$colored-bar-size});
+				height: 99.5%;
+				position: absolute;
+				top: -$colored-bar-size;
+				left: -$colored-bar-size;
+				background-color: $secondary-color;
+				z-index: $below-base;
+			}
+		}
+	}
+	.cta{
+		&.top-cta{
+			width: 100%;
+		}
+		&.bottom-cta{
+			color: #FFF;
+		}
+		&.right-cta{
+			margin-top: auto;
+		}
+		.Button{
+			height: $scroll-button-width;
+			width: $scroll-button-width;
+			background-color: $secondary-color;
+			background-image: url('');
+			background-position: center center;
+			background-size: 25% auto;
+			background-repeat: no-repeat;
+			transition: $default-transition;
+			position: relative;
+			overflow: hidden;
+			margin-right: 2em;
+			&::after{
+				content: "";
+				width: 0;
+				height: 0;
+				position: absolute;
+				left: 50%;
+				top: 50%;
+				transform: translate(-50%, -50%);
+				border-radius: 50%;
+				transition: $default-transition;
+				cursor: pointer;
+			}
+			&:hover::after, &.active::after{
+				width: 150%;
+				height: 150%;
+			}
+			&.green{
+				background-color: $primary-color;
+				&:after{
+					background-color: $off-primary-color;
+				}
+			}
+			&.orange{
+				background-color: $secondary-color;
+				&:after{
+					background-color: $off-secondary-color;
+				}
+			}
+			a{
+				z-index: 1;
+				position: relative;
+				height: 100%;
+				width: 100%;
+
+				img{
+					margin-bottom: 0;
+					max-width: 50%;
+				}
+			}
+		}
+		p{
+			margin-bottom: 0;
+			font-size: 3em;
+		}
+	}
+	.col-50{
+		&.left{
+			.bg-img{
+				min-height: calc(80vh - #{$scroll-button-width});
+				margin-bottom: $scroll-button-width;
+			}
+		}
+		.large{
+			font-size: 8em;
+			line-height: 1em;
+			&.left{
+				justify-self: flex-start;
+				margin: .3em .3em auto 0;
+			}
+			&.right{
+				margin-left: .3em;
+				margin-top: .3em;
+			}
+			&.no-space{
+				margin-left: 0;
+				margin-right: 0;
+			}
+		}
+	}
+}

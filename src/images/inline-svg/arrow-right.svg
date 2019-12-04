@@ -1,0 +1,10 @@
+<svg width="31px" height="25px" viewBox="0 0 31 25" version="1.1">
+    <g id="full-site" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="About-New" transform="translate(-281.000000, -8273.000000)" stroke="#673D1A" stroke-width="4.8">
+            <g id="arrow-left-copy" transform="translate(296.000000, 8285.000000) rotate(-180.000000) translate(-296.000000, -8285.000000) translate(283.000000, 8275.000000)">
+                <line x1="25.6" y1="9.6" x2="0" y2="9.6" id="Shape"></line>
+                <polyline id="Shape" points="9.6 19.2 0 9.6 9.6 0"></polyline>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,33 @@
+.AllianceIntro{
+	position: relative;
+	padding: $colored-bar-size 0;
+	&::after{
+		content: "";
+		height: 100%;
+		width: calc(50% - 1.5vw);
+		position: absolute;
+		top: 0;
+		left: 0;
+		background-color: $primary-color;
+		z-index: $below-base;
+	}
+	.image-container{
+		position: relative;
+		min-height: 80vh;
+		.bg-img{
+			height: 100%;
+		}
+	}
+	.content-container{
+		padding: 5vh $colored-bar-size 0 3em;
+		.heading{
+			font-size: 6em;
+			line-height: 1em;
+			margin-bottom: .5em;
+		}
+		.content{
+			font-size: 1.3em;
+			line-height: 1.4em;
+		}
+	}
+}

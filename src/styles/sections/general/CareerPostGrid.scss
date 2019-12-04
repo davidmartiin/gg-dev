@@ -1,0 +1,38 @@
+.CareerPostGrid{
+	padding: 2em $colored-bar-size 15vh;
+	.heading{
+		font-size: 4em;
+		line-height: 1em;
+		margin-bottom: 1em;
+	}
+	.post-grid{
+		.post-grid-item{
+			width: 28%;
+			margin-bottom: 3em;
+			&:nth-child(3n + 2){
+				margin: 0 8%;
+			}
+			.title{
+				line-height: 1.3em;
+				font-size: 2em;
+				font-weight: bold;
+			}
+			.excerpt{
+				margin-bottom: 3em;
+			}
+			hr{
+				height: 2vh;
+				background-color: $secondary-color;
+				border: none;
+			}
+			a{
+				text-decoration: none;
+				font-size: 2em;
+				transition: $default-transition;
+				&:hover{
+					color: $primary-color;
+				}
+			}
+		}
+	}
+}

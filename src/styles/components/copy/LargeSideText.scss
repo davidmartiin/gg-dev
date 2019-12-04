@@ -1,0 +1,14 @@
+.side-text{
+	writing-mode: vertical-lr;
+	text-orientation: sideways;
+	font-size: 6em;
+	line-height: 1.25em;
+	margin-bottom: 0;
+	margin-right: 2.5rem;
+	&.medium{
+		font-size: 5em;
+	}
+	&.left{
+		transform: rotate(180deg);
+	}
+}

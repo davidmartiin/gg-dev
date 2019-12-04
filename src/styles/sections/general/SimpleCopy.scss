@@ -1,0 +1,36 @@
+.SimpleCopy{
+	padding: $header-height 10vw;
+	&.heading-only{
+		h2{
+			font-size: 3em;
+		}
+	}
+	h2{
+		font-size: 3em;
+		font-family: $primary-font;
+	}
+	p{
+		font-size: 2em;
+		line-height: 1.4em;
+	}
+}
+//Events page SimpleCopy
+.SimpleCopy.Events{
+	& > div{
+		margin-bottom: 10vh;
+
+
+	}
+	strong{
+		margin-right: .5em;
+	}
+	a{
+		color: $brown;
+		text-decoration: none;
+		transition: $default-transition;
+		font-weight: bold;
+		&:hover{
+			color: $secondary-color;
+		}
+	}
+}

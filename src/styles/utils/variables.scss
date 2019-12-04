@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css?family=Chelsea+Market&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap');
+
+//Font Related
+$primary-font: 'Chelsea Market', cursive;
+$secondary-font: 'Open Sans', sans-serif;
+
+//Colors
+$primary-color: #659E42;
+$off-primary-color: #4F8C2A;
+$secondary-color: #F68A33;
+$off-secondary-color: #D66306;
+$brown: #673D1A;
+$peach: #FFF6F0;
+
+//General
+$colored-bar-size: 5vw;
+$scroll-button-width: 100px;
+
+// Header Related
+$header-height: 100px;
+
+// Transition
+$default-transition: all cubic-bezier(.4, 1, .5, 1) .4s;
+
+// z-index
+$below-base: -1;
+$base: 0;
+$above-base: 1;
+$below-header-z: 99;
+$header-z: 100;
+$above-header-z: 101;

@@ -1,0 +1,39 @@
+.main-header{
+	width: 100%;
+	height: $header-height;
+	position: fixed;
+	background-color: $primary-color;
+	padding-left: $colored-bar-size;
+	padding-right: $colored-bar-size;
+	z-index: $header-z;
+
+	.menu-container{
+		height: inherit;
+
+		.menu-item{
+			height: inherit;
+			font-size: 1.2em;
+			font-family: $primary-font;
+			text-decoration: none;
+			padding: 0 1em 1em;
+			color: #fff;
+			transition: $default-transition;
+
+			&.active, &:hover{
+				background-color: $off-primary-color;
+			}
+
+			img{
+				margin-bottom: .2em;
+				margin-right: .5em;
+			}
+		}
+	}
+	.header-logo{
+		margin-left: auto;
+		img{
+			max-width: 200px;
+			margin-bottom: 0;
+		}
+	}
+}

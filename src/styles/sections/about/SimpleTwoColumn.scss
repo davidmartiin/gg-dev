@@ -1,0 +1,12 @@
+.SimpleTwoColumn{
+	height: calc(100vh - #{$header-height});
+
+	.col-50:last-child{
+		padding: 0 5vw 0 3vw;
+
+		.copy-container{
+			font-size: 1.3em;
+			line-height: 1.4em;
+		}
+	}
+}

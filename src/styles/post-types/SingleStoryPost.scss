@@ -1,0 +1,18 @@
+.SingleStoryPost{
+	padding: calc(#{$header-height} + 2em) 1em $header-height;
+	width: 70%;
+	margin: 0 auto;
+
+	p.h1{
+		font-size: 3em;
+		margin-bottom: 1em;
+		line-height: 1em;
+	}
+	p.h1.separator{
+		margin: 2em 0;
+	}
+	.impact, .overview{
+		font-size: 1.3em;
+		line-height: 1.4em;
+	}
+}
